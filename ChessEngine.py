@@ -473,6 +473,14 @@ class Move:
                               (self.pieceMoved == "bp" and self.endRow == len(board)))
         self.enPassant = enPassant
         self.castle = castle
+        if self.castle:
+            print(self.castle)
+            print(self.pieceMoved)
+            print(self.pieceCaptured)
+            print(self.startRow)
+            print(self.startCol)
+            print(self.endRow)
+            print(self.endCol)
 
         if enPassant:
             self.pieceCaptured = "wp" if self.pieceMoved == "bp" else "bp"
